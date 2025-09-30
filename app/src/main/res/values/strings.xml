@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">GigHop</string>
+    <string name="profile_image">Profile Image</string>
+    <string name="choose_method">Choose method for taking image</string>
+    <string name="camera">Camera</string>
+    <string name="gallery">Gallery</string>
+    <string name="log_in">Log In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="map">Map</string>
+    <string name="leaderboard">Leaderboard</string>
+    <string name="settings">Settings</string>
+    <string name="table">Table</string>
+    <string name="object_details">Object Details</string>
+    <string name="add_live_music">Add Live Music Event</string>
+</resources>

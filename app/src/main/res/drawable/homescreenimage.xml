@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Scale down / add margin -->
+    <group
+        android:scaleX="0.75"
+        android:scaleY="0.75"
+        android:translateX="13.5"
+        android:translateY="13.5">
+
+        <!-- Location pin -->
+        <path
+            android:fillColor="#7B1FA2"
+            android:pathData="M54,8
+                C35,8 20,23 20,42
+                c0,21 34,58 34,58
+                s34,-37 34,-58
+                c0,-19 -15,-34 -34,-34z
+                M54,54
+                a12,12 0 1,1 0,-24
+                a12,12 0 1,1 0,24z"/>
+
+        <!-- Music note -->
+        <path
+            android:fillColor="#C58BF2"
+            android:pathData="M50,36 v16
+                c-2,-1 -5,-1 -7,1
+                c-2,2 -2,5 0,7
+                c2,2 6,2 8,0
+                c1,-1 2,-3 2,-5
+                V38 l8,-2 v-4 l-11,3z"/>
+    </group>
+</vector>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="padding_small">8dp</dimen>
+    <dimen name="padding_medium">16dp</dimen>
+    <dimen name="thickness_divider">1dp</dimen>
+    <dimen name="border_medium">3.dp</dimen>
+    <dimen name="image_small">60.dp</dimen>
+    <dimen name="elevation_medium">6.dp</dimen>
+    <dimen name="border_small">1.dp</dimen>
+    <dimen name="image_large">140.dp</dimen>
+    <dimen name="icon_small">28.dp</dimen>
+    <dimen name="icon_medium">44.dp</dimen>
+    <dimen name="padding_large">32.dp</dimen>
+    <dimen name="image_medium">100.dp</dimen>
+    <dimen name="padding_xl">120.dp</dimen>
+</resources>
