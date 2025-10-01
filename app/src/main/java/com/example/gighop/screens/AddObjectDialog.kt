@@ -68,7 +68,7 @@ fun AddObjectDialog(
     var expanded by remember { mutableStateOf(false) }
     var showError by remember { mutableStateOf(false) }
 
-    val types = listOf("Rock", "Rap", "Jazz", "Folk", "Techno","TRap")
+    val types = listOf("Rock", "Rap", "Jazz", "Folk", "Techno","Pop")
     val imageUri = remember { mutableStateOf(Uri.EMPTY) }
 
     val context = LocalContext.current
