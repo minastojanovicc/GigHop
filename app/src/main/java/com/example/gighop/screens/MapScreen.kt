@@ -71,13 +71,6 @@ fun MapScreen(
 
     var showAddObjectDialog by remember { mutableStateOf(false) }
     var showFilters by remember { mutableStateOf(false) }
-    var showMarkerDialog by remember { mutableStateOf<Pair<String, String>?>(null) }
-
-
-//    // Track if we should auto-follow the user
-//    var followUser by rememberSaveable { mutableStateOf(true) }
-//    var cameraMovedManually by remember { mutableStateOf(false) }
-//    var lastUserLocation by remember { mutableStateOf<LatLng?>(null) }
 
     val nis = LatLng(43.321445, 21.896104)
     val cameraPositionState = rememberCameraPositionState {
@@ -98,19 +91,6 @@ fun MapScreen(
         }
     }
 
-// //    Auto-follow user location - Navigation mode
-//    LaunchedEffect(currentLocation) {
-//        currentLocation?.let { location ->
-//            val userLatLng = LatLng(location.latitude, location.longitude)
-//            if (!cameraMovedManually || lastUserLocation != userLatLng) {
-//                cameraPositionState.animate(
-//                    update = CameraUpdateFactory.newLatLngZoom(userLatLng, 17f),
-//                    durationMs = 1000
-//                )
-//                lastUserLocation = userLatLng
-//            }
-//        }
-//    }
 
     if(currentLocation != null) {
         LaunchedEffect(key1 = true) {
@@ -186,10 +166,6 @@ fun MapScreen(
                                 ),
                                 title = mapObject.title,
                                 snippet = mapObject.subject,
-//                                onClick = {
-//                                    showMarkerDialog = mapObject.title to mapObject.id
-//                                    true
-//                                }
                                 onInfoWindowClick={
                                     navController.navigate(Screen.Object.name + "/${mapObject.id}")
                                 }
@@ -218,8 +194,7 @@ fun MapScreen(
                     }
                 }
             }
-
-
+            
             // Filter dialog
             if (showFilters) {
                 FilterObjectDialog(
@@ -241,23 +216,6 @@ fun MapScreen(
                     onDismiss = {
                         objectViewModel.clearFilters()
                         showFilters = false
-                    }
-                )
-            }
-
-            // Marker Dialog
-            showMarkerDialog?.let { (title, objectId) ->
-                AlertDialog(
-                    onDismissRequest = { showMarkerDialog = null },
-                    title = { Text(title) },
-                    confirmButton = {
-                        Button(onClick = {
-                            navController.navigate(Screen.Object.name+"/$objectId")
-                            showMarkerDialog = null
-                        }) { Text("Details", fontSize = 18.sp) }
-                    },
-                    dismissButton = {
-                        Button(onClick = { showMarkerDialog = null }) { Text("Close", fontSize = 18.sp) }
                     }
                 )
             }
