@@ -194,7 +194,7 @@ fun MapScreen(
                     }
                 }
             }
-            
+
             // Filter dialog
             if (showFilters) {
                 FilterObjectDialog(

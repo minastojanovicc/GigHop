@@ -153,19 +153,19 @@ fun TableRow(mapObject: MapObject) {
         modifier = Modifier
             .fillMaxWidth()
             .background(MaterialTheme.colorScheme.surface)
-            .padding(vertical = 12.dp, horizontal = 24.dp),
+            .padding(vertical = 12.dp, horizontal = 12.dp),
         horizontalArrangement = Arrangement.SpaceEvenly,
         verticalAlignment = Alignment.CenterVertically
     ) {
         Text(
             text = mapObject.title,
-            style = MaterialTheme.typography.bodyLarge.copy(fontWeight = FontWeight.Medium),
+            style = MaterialTheme.typography.bodyMedium.copy(fontWeight = FontWeight.Medium),
             modifier = Modifier.weight(1f),
             textAlign = TextAlign.Start
         )
         Text(
-            text = mapObject.type,
-            style = MaterialTheme.typography.bodyLarge,
+            text = mapObject.subject,
+            style = MaterialTheme.typography.bodyMedium,
             modifier = Modifier
                 .weight(1f)
                 .padding(start = 8.dp),
@@ -173,10 +173,10 @@ fun TableRow(mapObject: MapObject) {
         )
         Text(
             text = mapObject.author,
-            style = MaterialTheme.typography.bodyLarge,
+            style = MaterialTheme.typography.bodyMedium,
             modifier = Modifier
                 .weight(1f)
-                .padding(start = 20 .dp),
+                .padding(start = 8.dp),
             textAlign = TextAlign.Center
         )
         Text(

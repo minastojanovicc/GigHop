@@ -67,7 +67,7 @@ fun FilterObjectDialog(
 
 
     var expanded by remember { mutableStateOf(false) }
-    val types = listOf("Rock", "Rap", "Jazz", "Folk", "Techno", "TRap")
+    val types = listOf("Rock", "Rap", "Jazz", "Folk", "Techno", "Pap")
 
     Dialog(onDismissRequest = { onDismiss() })
     {
@@ -182,15 +182,15 @@ fun FilterObjectDialog(
                 )
 
                 Spacer(modifier = Modifier.height(16.dp))
-                Text(text = "Radius: $radius km", fontSize = 18.sp)
+                Text(text = "Radius: ${radius.toInt()} m", fontSize = 18.sp)
                 Slider(
                     value = radius,
                     onValueChange = { newValue ->
-                        // Round to 2 decimal places
-                        val rounded = (newValue * 1000).toInt() / 1000f
-                        radius = rounded
+                        val rounded = newValue.toInt()
+                        radius = rounded.toFloat()
                     },
-                    valueRange = 0f..10f
+                    valueRange = 0f..5000f,
+                    steps=49
                 )
                 Spacer(modifier = Modifier.height(16.dp))
                 Row(

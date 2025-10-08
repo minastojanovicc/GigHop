@@ -75,7 +75,6 @@ class LocationService : Service() {
             10_000L                          // interval in ms
         ).apply {
             setMinUpdateIntervalMillis(5_000L) // fastest interval
-            // You can also setMaxUpdateDelayMillis(), setWaitForAccurateLocation(), etc.
         }.build()
 
         if (ActivityCompat.checkSelfPermission(

@@ -160,7 +160,7 @@ fun SignUpScreen(navController: NavHostController, viewModel: AuthViewModel) {
                     LaunchedEffect(Unit) {
                         Toast.makeText(context, "Registration successful!", Toast.LENGTH_SHORT).show()
                         navController.navigate(Screen.Map.name) {
-                            popUpTo("signup") { inclusive = true }
+                            popUpTo(Screen.SignUp.name) { inclusive = true }
                         }
                     }
                 }
@@ -177,7 +177,7 @@ fun SignUpScreen(navController: NavHostController, viewModel: AuthViewModel) {
             DividerTextComponent()
 
             ClickableLoginTextComponent (tryingToLogin = true, onTextSelected = {
-                navController.navigate("login")
+                navController.navigate(Screen.LogIn.name)
             })
 
 

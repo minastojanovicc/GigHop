@@ -103,7 +103,7 @@
         private fun calculateDistance(lat1: Double, lng1: Double, lat2: Double, lng2: Double): Float {
             val results = FloatArray(1)
             android.location.Location.distanceBetween(lat1, lng1, lat2, lng2, results)
-            return results[0] / 1000 // Vraća rezultat u kilometrima
+            return results[0] // Vraća rezultat u metrima
         }
 
         fun rateObject(objectId: String, value: Int, onResult: (Boolean, String?, Int) -> Unit) {
